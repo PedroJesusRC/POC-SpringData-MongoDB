@@ -36,17 +36,8 @@ public class BookController {
 	        return bookService.findById(id);
 	    }
 	
-	//Se pasan los datos mediante JSON
-//	@PostMapping("/add")
-//	public Book addBook(@FormParam("title") String title, @FormParam("author") String author) {
-//        return bookService.addBook(new Book(author, title));
-//    }
-
-	
-	//Se pasan los datos mediante variables
 	@PostMapping("/save")
 	public Book saveBook(@RequestBody Book book) {
-		System.out.println("Hola");
 		return bookService.saveBook(book);
 	}
 	
